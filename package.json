@@ -1,0 +1,43 @@
+{
+    "name": "compo-ui",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/compo-ui.umd.cjs",
+    "module": "./dist/compo-ui.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/compo-ui.es.js",
+            "require": "./dist/compo-ui.umd.cjs"
+        },
+        "./vue": {
+            "import": "./dist/compo-ui-vue.es.js",
+            "require": "./dist/compo-ui-vue.umd.cjs"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "clsx": "^2.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "@vitejs/plugin-react": "^4.2.1",
+        "@vitejs/plugin-vue": "^5.2.4",
+        "typescript": "^5.3.3",
+        "veaury": "^2.6.3",
+        "vite": "^5.1.6",
+        "vite-plugin-dts": "^3.7.3",
+        "vue": "^3.5.28"
+    }
+}

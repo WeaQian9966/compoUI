@@ -1,0 +1,99 @@
+.trackRow {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid #333;
+    background: #1e1e1e;
+    position: relative;
+}
+
+.trackHeader {
+    position: sticky;
+    left: 0;
+    width: 220px;
+    flex-shrink: 0;
+    background: #252525;
+    border-right: 1px solid #333;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.trackInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.trackName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ddd;
+    padding-left: 8px;
+    border-left: 4px solid #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trackControls {
+    display: flex;
+    gap: 4px;
+}
+
+.btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #333;
+    color: #888;
+    transition: all 0.1s;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.mute.active {
+    background: #f59e0b;
+    /* amber */
+    color: #000;
+}
+
+.solo.active {
+    background: #3b82f6;
+    /* blue */
+    color: #fff;
+}
+
+.trackKnobs {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.knobWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trackLane {
+    height: 100%;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    /* background-image: repeating-linear-gradient(to right, #222 0, #222 1px, transparent 1px, transparent 100px); */
+    /* Grid lines would depend on zoom, handled by timeline maybe? */
+}
+
+.waveformSvg {
+    display: block;
+}
