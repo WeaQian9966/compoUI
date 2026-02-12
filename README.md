@@ -1,6 +1,7 @@
 <div align="center">
 
 # CompoUI
+
 ### The "Vibe-Coded" Component Library for Musical Web Apps
 
 [![npm version](https://img.shields.io/npm/v/compo-ui.svg)](https://www.npmjs.com/package/compo-ui)
@@ -12,6 +13,8 @@
 [Features](#-features) • [Installation](#-installation) • [Components](#-components) • [Vue Support](#-vue-3-support)
 
 </div>
+
+# ⚠️Notice: not yet refined, many bugs to be fixed
 
 ---
 
@@ -30,7 +33,7 @@
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation (not yet available)
 
 ### 1. Install via npm
 
@@ -39,6 +42,7 @@ npm install compo-ui
 ```
 
 ### 2. Import Styles
+
 You must import the CSS file **once** in your application entry point (e.g., `main.tsx` or `main.js`).
 
 ```javascript
@@ -89,7 +93,7 @@ const onNotePlay = (midiNote) => {
 <template>
   <div class="synth-rack">
     <Knob :value="75" :size="64" label="RESONANCE" />
-    
+  
     <Keyboard 
       :startNote="36" 
       :octaves="2" 
@@ -104,40 +108,44 @@ const onNotePlay = (midiNote) => {
 ## 📦 Component Reference
 
 ### `Timeline`
+
 The timeline manages the horizontal time axis, consisting of a precise ruler, a sticky sidebar spacer, and a synchronized playhead.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `duration` | `number` | Required | Total length in seconds. |
-| `currentTime`| `number` | Required | Current playback position (seconds). |
-| `zoom` | `number` | `100` | Horizontal scale (pixels per second). |
-| `sidebarWidth`| `number` | `220` | Width of the reserved left area for track headers. |
+| Prop             | Type       | Default  | Description                                        |
+| ---------------- | ---------- | -------- | -------------------------------------------------- |
+| `duration`     | `number` | Required | Total length in seconds.                           |
+| `currentTime`  | `number` | Required | Current playback position (seconds).               |
+| `zoom`         | `number` | `100`  | Horizontal scale (pixels per second).              |
+| `sidebarWidth` | `number` | `220`  | Width of the reserved left area for track headers. |
 
 ### `Track`
+
 Renders audio content rows. Designed to live inside the `<Timeline>`'s track area.
 
-| Prop | Type | Description |
-|------|------|-------------|
-| `data` | `object` | Track metadata (`id`, `name`, `color`, `type`). |
-| `volume` | `0-100` | Controls the track volume knob. |
-| `pan` | `-50 to 50` | Controls the track pan knob. |
-| `muted` | `boolean` | Toggle state. |
+| Prop       | Type          | Description                                             |
+| ---------- | ------------- | ------------------------------------------------------- |
+| `data`   | `object`    | Track metadata (`id`, `name`, `color`, `type`). |
+| `volume` | `0-100`     | Controls the track volume knob.                         |
+| `pan`    | `-50 to 50` | Controls the track pan knob.                            |
+| `muted`  | `boolean`   | Toggle state.                                           |
 
 ### `Knob`
+
 A "virtual analog" rotary control. Users can drag vertically to change values, which is preferred for mouse precision over radial movement.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `value` | `number` | Required | Controlled value. |
-| `min` | `number` | `0` | Minimum value. |
-| `max` | `number` | `100` | Maximum value. |
-| `sensitivity`| `number` | `1` | Drag distance modifier. |
+| Prop            | Type       | Default  | Description             |
+| --------------- | ---------- | -------- | ----------------------- |
+| `value`       | `number` | Required | Controlled value.       |
+| `min`         | `number` | `0`    | Minimum value.          |
+| `max`         | `number` | `100`  | Maximum value.          |
+| `sensitivity` | `number` | `1`    | Drag distance modifier. |
 
 ---
 
 ## 🛠️ Technology
 
 Built with:
+
 - **React 18**
 - **TypeScript**
 - **Vite** (Library Mode)
